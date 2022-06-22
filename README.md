@@ -1,0 +1,2 @@
+# CookingBuddy
+Opdracht NOVI Frontend
