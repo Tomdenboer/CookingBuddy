@@ -1,0 +1,26 @@
+body {
+    background: url('./../../Assets/corn\ blue.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+main {
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.subTitle {
+    font-weight: 350;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
