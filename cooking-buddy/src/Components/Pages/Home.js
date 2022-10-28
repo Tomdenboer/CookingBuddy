@@ -1,6 +1,6 @@
 import './Home.css';
-import Button from './../CustomButton';
-import apiHelper from '../../helpers/apiHelper';
+import Button from '../Common/CustomButton';
+import apiHelper from '../../helpers/apiUtils';
 
 function Home() {
     return (
