@@ -1,0 +1,32 @@
+/* font color #3D3D3D */
+
+body {
+    background: url('./../../Assets/aardlingen.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+main {
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+
+h1 {
+    /* color: white;
+    /* text-shadow: 2px 1px 3px #494949; */
+    font-size: 60px; 
+
+    color: #3D3D3D;
+     /* text-shadow: 2px 1px 1px darkgray; */
+}
+
+.subTitle {
+    font-weight: 350;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

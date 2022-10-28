@@ -1,0 +1,23 @@
+a {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0px 2px rgb(223, 223, 223);
+
+    color: #3D3D3D;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+
+    /* for the scale transform on hover */
+    transition-duration: 0.3s;
+}
+
+/* Scale and change visuals on hover  */
+a:hover {
+    transform: scale(1.05);
+    background:rgb(223, 223, 223);
+    font-weight: bold;
+}
