@@ -1,5 +1,6 @@
 import RecipeList from '../Recipes/RecipeList';
 import styles from './Recipes.module.css';
+import { useEffect } from 'react';
 
 const recipeList = [
     {
@@ -35,6 +36,10 @@ const recipeList = [
 ]
 
 function Recipes() {
+    // this effect is a decent way to set background dynamicly without scoped css. 
+    useEffect(() => {
+        document.body.classList.add(styles.body)
+    }, []);
     return (
         <main>
             <RecipeList recipes={recipeList}></RecipeList>
