@@ -1,6 +1,6 @@
 /* font color #3D3D3D */
 
-body {
+.body {
     background: url('./../../Assets/aardlingen.jpg') no-repeat center center fixed;
     background-size: cover;
 }
