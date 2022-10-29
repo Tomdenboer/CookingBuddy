@@ -1,4 +1,5 @@
 import RecipeList from '../Recipes/RecipeList';
+import styles from './Recipes.module.css';
 
 const recipeList = [
     {

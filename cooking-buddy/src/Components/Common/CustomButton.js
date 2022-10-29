@@ -4,12 +4,16 @@
 */
 
 import React, {Fragment} from 'react';
-import './CustomButton.css';
+import styles from './CustomButton.module.css';
 
 function CustomButton (props) {
+
+    // changes button size based on prop input. I think without sass this is a decent way to do it. 
+    var buttonSize = props.size === "small" ? styles.small : styles.big;
+        
     return (
         <Fragment>
-            <a onClick={props.clickEvent} href={props.path}>{props.content}</a>
+            <a className={[styles.button, buttonSize].join(" ")} onClick={props.clickEvent} href={props.path}>{props.content}</a>
         </Fragment>
     );
 }
