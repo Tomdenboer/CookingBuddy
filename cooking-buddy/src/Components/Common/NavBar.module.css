@@ -1,0 +1,28 @@
+.navBar {
+    margin-top: 30px;
+}
+.menuItems {
+    margin-right: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: right;
+    column-gap: 50px;
+}
+
+.menuItems li {
+    text-decoration: none;
+    display: inline;
+}
+
+.link {
+    text-decoration: none;
+    color: grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.link:hover {
+    /* transition: background 1000ms linear;
+    background: white; */
+    color: black;
+}

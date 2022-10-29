@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Normally you wouldn't store this in a client side app, of course. 
 const apiKey = 'ee49ddfe10dd4f61b02797850ba8b30d';
 export default {
       
@@ -12,7 +13,7 @@ export default {
             })
         }
      catch(e) {
-
+        console.log(e);
     }
 }
 }
