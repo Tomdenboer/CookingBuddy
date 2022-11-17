@@ -1,9 +1,14 @@
 import styles from './RecipeListItem.module.css';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 function RecipeListItem(props) {
     const item = props.item;
+    const navigate = useNavigate();
     return (
-        <main className={styles.recipe}>
+        <main className={styles.recipe} onClick={() => {navigate('/recipes/' + item.id)}}>
             <img src={item.image} alt="picture of a recipe" className={styles.img}></img>
             <div className={styles.recipeHeader}>
                 <h2>{item.title}</h2>

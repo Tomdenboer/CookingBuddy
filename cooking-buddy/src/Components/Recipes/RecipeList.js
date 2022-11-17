@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import RecipeListItem from './RecipeListItem';
 import apiUtils from '../../helpers/apiUtils';
+import { redirect } from 'react-router-dom';
 
 
 function RecipeList(props) {
@@ -15,14 +16,9 @@ function RecipeList(props) {
         getRecipes();
     }, []);
 
-    // const list = props.recipes;
-    // console.log(list);
     const recipeListItems = recipes.map((item) =>
-        // <RecipeListItem key={item.id} id={item.id} name={item.title} vegetarian={item.vegetarian} healthScore={item.healthScore} img={item.image} timeToPrepare={item.readyInMinutes}/>
         <RecipeListItem key={item.id} item={item}/>
     );
-    // console.log(recipes);
-    // console.log(listItems);
     return (
         <ul>
             {recipeListItems}
