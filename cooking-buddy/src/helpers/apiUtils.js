@@ -8,13 +8,18 @@ export default {
         I do request extra recipe information, because this gives more options to filter recipes.*/
     test: async () => {
         try {
-            const result = axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey='+ apiKey + '&number=15&addRecipeInformation=true').then((response) => {
-                console.log(response);
-            })
+            const result = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey='+ apiKey + '&number=15&addRecipeInformation=true');
+            const items = await result.data.results;
+            return items;
         }
      catch(e) {
         console.log(e);
     }
+    
+}, test2: () => {
+    var testvar = "oeloeloeloe";
+    return testvar;
 }
 }
+
 

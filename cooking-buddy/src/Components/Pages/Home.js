@@ -16,7 +16,6 @@ function Home() {
                 <Button content="GET STARTED" clickEvent={apiHelper.test}></Button>
                 <Button content="SHOW ALL RECIPES" path="/recipes"></Button>
             </div>
-
         </main>
     );
 }
