@@ -1,0 +1,23 @@
+/* This is the one case where using modules kind of backfires and makes me write duplicate css. */
+
+.ul {
+    text-align: left;
+    padding-left: 0;
+}
+.li {
+    list-style-type: none;
+}
+
+.input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.pressEnter {
+    visibility: hidden;
+    color: black;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0;
+}
