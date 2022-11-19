@@ -1,9 +1,6 @@
 import styles from './RecipeListItem.module.css';
 import { useNavigate } from 'react-router-dom';
 
-
-
-
 function RecipeListItem(props) {
     const item = props.item;
     const navigate = useNavigate();
@@ -15,8 +12,8 @@ function RecipeListItem(props) {
             </div>
             <div className={styles.recipeInfo}>
                 <p>Health score: {item.healthScore}</p>
-                <p>{item.vegetarian.toString()}</p>
                 <p>Preparation time: {item.readyInMinutes}</p>
+                <p>{item.vegetarian.toString()}</p>
             </div>
             
         </main>

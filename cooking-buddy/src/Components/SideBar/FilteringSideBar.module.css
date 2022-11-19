@@ -1,0 +1,20 @@
+.sideBar {
+    text-align: left;
+    margin-left: 30%;
+}
+
+/* .ingredients {
+    margin-bottom: 60px;
+} */
+
+.ul {
+    padding-left: 0;
+}
+
+.li {
+    list-style-type: none;
+}
+
+.marginTop {
+    margin-top: 40px;
+}
