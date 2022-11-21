@@ -5,9 +5,11 @@ export const AuthenticationContext = createContext(null);
 function AuthenticationContextProvider({children}) {
     const [userInfo, setUserInfo] = useState({});
 
-    useEffect(() => {
-        console.log(userInfo);
-    });
+    function isAuthenticated() {
+        if(localStorage.getItem("token") != null) {
+            return true;
+        } else return false;
+    }    
 
     function handleLogin(loginResponse) {
         let token = loginResponse.accessToken;
@@ -16,7 +18,7 @@ function AuthenticationContextProvider({children}) {
         setUserInfo(loginResponse);
     }
     return (
-        <AuthenticationContext.Provider value={{handleLogin}}>
+        <AuthenticationContext.Provider value={{handleLogin, isAuthenticated}}>
             {children}
         </AuthenticationContext.Provider>
     );

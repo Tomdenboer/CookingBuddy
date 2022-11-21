@@ -4,16 +4,19 @@ import CustomButton from "../Common/CustomButton";
 import styles from "./Register.module.css";
 import { useContext, useEffect, useState } from "react";
 import {AuthenticationContext} from "../../context/AuthenticationContext";
+import { useNavigate } from "react-router-dom";
 
 function LogIn() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const {handleLogin} = useContext(AuthenticationContext);
+    const {isAuthenticated} = useContext(AuthenticationContext);
     const [validationMessage, setValidationMessage] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        document.body.classList.add(styles.body);
-    });
+        document.body.classList = (styles.body);
+    }, []);
 
     function usernameChanged(e) {
         setUsername(e.target.value);
@@ -24,12 +27,18 @@ function LogIn() {
     }
 
     async function signIn() {
-        const result = await AuthenticationApi.logIn(username, password);
-        if(result.status === 200) {
-            handleLogin(result.data);
+        if(username !== "" && password !== "") {
+            const result = await AuthenticationApi.logIn(username, password);
+            if(result.status === 200) {
+                handleLogin(result.data);
+                navigate("/");
+            } else {
+                    setValidationMessage("Incorrect username or password. Please try again.")
+                }
         } else {
-            setValidationMessage("Incorrect username or password. Please try again.")
+            setValidationMessage("Please fill in all the fields.")
         }
+        console.log(isAuthenticated());
     }
 
     return (

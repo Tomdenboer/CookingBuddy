@@ -3,10 +3,19 @@ import FilteringSideBar from '../SideBar/FilteringSideBar';
 import CustomButton from '../Common/CustomButton';
 import styles from './Recipes.module.css';
 import recipesApi from '../../helpers/api/RecipesApi';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AuthenticationContext } from '../../context/AuthenticationContext';
+import { useNavigate } from 'react-router-dom';
 
 function Recipes() {
     const [recipes, setRecipes] = useState([]);
+    const navigate = useNavigate();
+    const {isAuthenticated} = useContext(AuthenticationContext);
+    useEffect(() => {
+        if(!isAuthenticated ()) {
+            navigate("/signin");
+        }
+    })
     useEffect(() => {
         const getRecipes = async () => {
             const recipeList = await(recipesApi.getRecipes());
@@ -18,7 +27,7 @@ function Recipes() {
     }, []);
 
     useEffect(() => {
-        document.body.classList.add(styles.body);
+        document.body.classList = (styles.body);
     }, []);
 
     function recipesChanged(recipes) {

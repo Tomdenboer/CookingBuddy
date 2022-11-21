@@ -11,8 +11,8 @@ function Register() {
     const [validationMessage, setValidationMessage] = useState("");
 
     useEffect(() => {
-        document.body.classList.add(styles.body);
-    });
+        document.body.classList = (styles.body);
+    }, []);
 
     function usernameChanged(e) {
         setUsername(e.target.value);
