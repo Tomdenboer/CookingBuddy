@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
+import AuthenticationContextProvider from './context/AuthenticationContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // NOTE: disabled strict mode because of many api calls.
   <>
+  <AuthenticationContextProvider>
     <App />
+  </AuthenticationContextProvider>
   </>
 );
 
