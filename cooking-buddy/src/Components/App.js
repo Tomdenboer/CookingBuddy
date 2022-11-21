@@ -18,7 +18,7 @@ function App() {
           <Route path="recipes" element={<Recipes/>}/>
           <Route path="recipes/:id" element={<SelectedRecipe/>}/>
           <Route path={"register"} element={<Register/>} />
-          <Route path={"login"} element={<LogIn/>} />
+          <Route path={"signin"} element={<LogIn/>} />
         </Routes> 
       </BrowserRouter>
     </div>
