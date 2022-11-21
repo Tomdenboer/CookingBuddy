@@ -3,7 +3,7 @@ import IngredientPicker from "./IngredientPicker";
 import styles from "./FilteringSideBar.module.css"
 import { useEffect, useState } from "react";
 import CustomInput from "../Common/CustomInput";
-import apiUtils from "../../helpers/apiUtils";
+import recipesApi from "../../helpers/api/RecipesApi";
 
 function FilteringSideBar(props) {
     const [ingredients, setIngredients] = useState([{"name": "potatoes", "isChecked": false}, {"name": "strawberries", "isChecked": false}, {"name": "rice", "isChecked": false}]);
@@ -14,12 +14,6 @@ function FilteringSideBar(props) {
         <li key={item.name} className={styles.li}><input type="checkbox" defaultChecked={item.isChecked} 
         onClick={() => setDietChecked(item)}></input>{item.name}</li>
     );
-
-
-    //console.log 
-    useEffect(() => {
-        console.log(timeToPrepare);
-    });
 
     // I kinda think there might be a better way to do this, but it works, and it's only 2 lines so it's not too bad.
     function setDietChecked(diet) {
@@ -49,7 +43,7 @@ function FilteringSideBar(props) {
         let selectedIngredients = ingredients.filter((item) => item.isChecked === true);
         selectedIngredients = selectedIngredients.map((item) => item = item.name);
 
-        const results = await apiUtils.getFilteredRecipes(selectedDiets, selectedIngredients, timeToPrepare);
+        const results = await recipesApi.getFilteredRecipes(selectedDiets, selectedIngredients, timeToPrepare);
         props.recipesChanged(results);
     }
 
@@ -74,7 +68,5 @@ function FilteringSideBar(props) {
         </div>
     );
 }
-
-
 
 export default FilteringSideBar;

@@ -1,0 +1,11 @@
+.body {
+    background: #d8e1ea;
+}
+
+.form {
+    margin-top: 120px;
+}
+
+.form > * {
+    margin-top: 50px;
+}

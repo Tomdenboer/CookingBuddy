@@ -2,14 +2,14 @@ import RecipeList from '../Recipes/RecipeList';
 import FilteringSideBar from '../SideBar/FilteringSideBar';
 import CustomButton from '../Common/CustomButton';
 import styles from './Recipes.module.css';
-import apiUtils from '../../helpers/apiUtils';
+import recipesApi from '../../helpers/api/RecipesApi';
 import { useEffect, useState } from 'react';
 
 function Recipes() {
     const [recipes, setRecipes] = useState([]);
     useEffect(() => {
         const getRecipes = async () => {
-            const recipeList = await(apiUtils.getRecipes());
+            const recipeList = await(recipesApi.getRecipes());
             // const recipeList = [];
             console.log("RecipeList.js: recipeList: " + (recipeList?.length > 0  ? recipeList : "[]"));
             setRecipes(recipeList);
