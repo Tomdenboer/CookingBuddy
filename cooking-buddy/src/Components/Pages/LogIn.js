@@ -38,7 +38,6 @@ function LogIn() {
         } else {
             setValidationMessage("Please fill in all the fields.")
         }
-        console.log(isAuthenticated());
     }
 
     return (

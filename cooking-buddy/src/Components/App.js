@@ -12,7 +12,6 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
           <Route path="recipes" element={<Recipes/>}/>
@@ -20,7 +19,6 @@ function App() {
           <Route path={"register"} element={<Register/>} />
           <Route path={"signin"} element={<LogIn/>} />
         </Routes> 
-      </BrowserRouter>
     </div>
   );
 }

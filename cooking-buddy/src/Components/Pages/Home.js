@@ -4,10 +4,8 @@ import { useEffect } from 'react';
 import strawberries from '../../Assets/aardlingen.jpg';
 
 function Home() {
-    // this effect is a decent way to set background dynamicly without scoped css. 
+    // this effect is a kind of decent way to set background dynamicly without scoped css. 
     useEffect(() => {
-        console.log(strawberries)
-        // document.body.classList.add(styles.body)
         document.body.className = styles.body;
     }, []);
     return (
