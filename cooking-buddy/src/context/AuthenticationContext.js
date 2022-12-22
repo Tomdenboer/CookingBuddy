@@ -11,6 +11,10 @@ function AuthenticationContextProvider({children}) {
         } else return false;
     }    
 
+    function handleLogout() {
+        localStorage.removeItem("token");
+    }
+
     function handleLogin(loginResponse) {
         let token = loginResponse.accessToken;
         delete loginResponse.accessToken;
@@ -18,7 +22,7 @@ function AuthenticationContextProvider({children}) {
         setUserInfo(loginResponse);
     }
     return (
-        <AuthenticationContext.Provider value={{handleLogin, isAuthenticated}}>
+        <AuthenticationContext.Provider value={{handleLogin, isAuthenticated, handleLogout}}>
             {children}
         </AuthenticationContext.Provider>
     );

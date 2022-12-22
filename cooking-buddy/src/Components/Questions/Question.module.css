@@ -1,0 +1,20 @@
+.question {
+    margin-top: 100px;
+}
+
+/* I don't like this: see 'verantwoordingsdocument -> ingredient picker' */
+.question ul {
+    text-align: center !important;
+}
+.buttonContainer {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    justify-content: safe;
+}
+
+.ingredients {
+    margin-bottom: 40px;
+}

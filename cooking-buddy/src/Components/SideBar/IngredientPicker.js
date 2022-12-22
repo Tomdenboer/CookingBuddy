@@ -70,9 +70,10 @@ function IngredientPicker (props) {
 
     return (
         <div>
-            <h3>Ingredients</h3>
-            <ul id="ingredientsList" className={styles.ul}>
-            </ul>
+            {props.hideLabel !== true &&
+               <h3>Ingredients</h3>
+            }
+            <ul id="ingredientsList" className={styles.ul}></ul>
             <CustomInput placeholder="Add Ingredient" keyevent={handleKeyEvent} type="text"></CustomInput>
             <p id="pressEnter" className={styles.pressEnter}>Press enter to add to the list</p>
         </div>
