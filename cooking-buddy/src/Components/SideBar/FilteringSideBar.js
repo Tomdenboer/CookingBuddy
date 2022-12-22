@@ -1,13 +1,13 @@
 import CustomButton from "../Common/CustomButton";
 import IngredientPicker from "./IngredientPicker";
 import styles from "./FilteringSideBar.module.css"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CustomInput from "../Common/CustomInput";
 import recipesApi from "../../helpers/api/RecipesApi";
 
 function FilteringSideBar(props) {
     const [ingredients, setIngredients] = useState([{"name": "potatoes", "isChecked": false}, {"name": "strawberries", "isChecked": false}, {"name": "rice", "isChecked": false}]);
-    const [diets, setDiets] = useState([{"name": "vegetarian", "isChecked" : true}, {"name": "vegan", "isChecked" : false}, {"name": "paleo", "isChecked" : false} ]);
+    const [diets, setDiets] = useState([{"name": "vegetarian", "isChecked" : false}, {"name": "vegan", "isChecked" : false}, {"name": "paleo", "isChecked" : false} ]);
     const [timeToPrepare, setTimeToPrepare] = useState(0);
 
     const dietsUL = diets.map((item) => 

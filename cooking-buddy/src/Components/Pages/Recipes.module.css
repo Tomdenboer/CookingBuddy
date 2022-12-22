@@ -13,3 +13,10 @@
     padding-left: 15%;
     padding-right: 15%;
 }
+
+.noRecipesFoundMessage {
+    margin-top: 40px;
+    font-style: italic;
+    padding-top: 40px;
+    border: 2px solid white;
+}
