@@ -3,6 +3,7 @@ import Button from '../Common/CustomButton';
 import { useEffect } from 'react';
 
 function Home() {
+    
     // this effect is a kind of decent way to set background dynamicly without scoped css. 
     useEffect(() => {
         document.body.className = styles.body;
