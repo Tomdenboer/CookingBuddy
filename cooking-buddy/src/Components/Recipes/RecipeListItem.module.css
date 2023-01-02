@@ -41,3 +41,13 @@
     grid-column: 1;
     align-self: center;
 }
+
+.ul {
+    text-align: left;
+    align-items: center;
+    margin: auto;
+    list-style-type: none;
+    color: green;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
