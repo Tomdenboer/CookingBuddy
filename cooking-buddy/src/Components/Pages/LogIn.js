@@ -10,7 +10,6 @@ function LogIn() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const {handleLogin} = useContext(AuthenticationContext);
-    const {isAuthenticated} = useContext(AuthenticationContext);
     const [validationMessage, setValidationMessage] = useState("");
     const navigate = useNavigate();
 
@@ -42,12 +41,13 @@ function LogIn() {
 
     return (
         <form className={styles.form}>
+            <h3 className={styles.header}>Log in to Cooking Buddy</h3>
             <div>
-                <h3>Username</h3>
+                <h3 className={styles.subTitle}>Username</h3>
                 <CustomInput type="text" keyevent={usernameChanged} placeholder="username" />
             </div>
             <div>
-                <h3>Password</h3>
+                <h3 className={styles.subTitle}>Password</h3>
                 <CustomInput type="password" keyevent={passwordChanged} placeholder="password" />
             </div>
             <div id="loginValidation">

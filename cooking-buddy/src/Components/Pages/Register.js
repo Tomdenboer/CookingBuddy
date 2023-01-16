@@ -36,7 +36,7 @@ function Register() {
             if(status === 200) {
                 setValidationMessage("Your account has been created!");
 
-                // login 
+                // login after registering and navigate to home.
                 const result = await AuthenticationApi.logIn(username, password);
                 if(result.status === 200) {
                     handleLogin(result.data);
@@ -52,17 +52,18 @@ function Register() {
 
     return (
         <form className={styles.form}>
-            <h4>Welcome to Cooking Buddy! Enter your information and start finding new recipes!</h4>
+            <h3 className={styles.header}>Welcome to Cooking Buddy</h3>
+            <h3 className={styles.subTitle}>Enter your information and start finding new recipes</h3>
             <div>
-                <h3>Username</h3>
+                <h3 className={styles.subTitle}>Username</h3>
                 <CustomInput type="text" placeholder="Enter a username" keyevent={usernameChanged}></CustomInput>
             </div>
             <div>
-                <h3>Password</h3>
+                <h3 className={styles.subTitle}>Password</h3>
                 <CustomInput type="password" placeholder="password" keyevent={passwordChanged}></CustomInput>
             </div>
             <div>
-                <h3>Email</h3>
+                <h3 className={styles.subTitle}>Email</h3>
                 <CustomInput type="email" placeholder="email" keyevent={emailChanged}></CustomInput>
             </div>
             <div>

@@ -34,7 +34,7 @@ function NavBar() {
             <ul className={styles.menuItems}>
                 <li><a href="/" className={styles.link}>Home</a></li>
                 <li><a href="/questionnaire" className={styles.link}>Find me a Recipe</a></li>
-                <li><a href="recipes" className={styles.link}>All Recipes</a></li>
+                <li><a href="/recipes" className={styles.link}>All Recipes</a></li>
                 <li>
                     <div ref={node => {loginRef = node}}>
                         <CustomButton id="signIn" content="Sign in" path="/signin" size="small"></CustomButton>
