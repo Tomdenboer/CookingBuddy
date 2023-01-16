@@ -18,25 +18,27 @@ export default {
     },
 
     getFilteredRecipes: async (diets, ingredients, timeToPrepare) => {
-        console.log("diets: ");
-        console.log(diets);
-        console.log("ingredients: ");
-        console.log(ingredients);
-        console.log(timeToPrepare);
-
-        const dietParams = diets.length > 0? "&diet=" + diets.join(",") : "";
-        const ingredientParams = ingredients.length > 0? "&includeIngredients=" + ingredients.join(",") : "";
+        const dietParams = diets?.length > 0? "&diet=" + diets.join(",") : "";
+        const ingredientParams = ingredients?.length > 0? "&includeIngredients=" + ingredients.join(",") : "";
         const timeToPrepareParams = timeToPrepare > 0 ? "&maxReadyTime=" + timeToPrepare : "";
-
         const baseQuery = "https://api.spoonacular.com/recipes/complexSearch?apiKey="+ apiKey + "&number=15&addRecipeInformation=true";
         const fullQuery = baseQuery + dietParams + ingredientParams + timeToPrepareParams;
-        console.log(fullQuery);
         
         try {
             const result = await axios.get(fullQuery);
             const items = await result.data.results;
-            console.log(items);
             return items;
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
+    getRecipeById: async(id) => {
+        const query = "https://api.spoonacular.com/recipes/" + id + "/information?apiKey="+ apiKey;
+        try{
+            const result = await axios.get(query);
+            const data = await result.data;
+            return data;
         } catch (e) {
             console.log(e);
         }

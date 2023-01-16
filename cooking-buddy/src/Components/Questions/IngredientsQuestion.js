@@ -1,7 +1,7 @@
 import styles from "./Question.module.css";
 import CustomButton from "../Common/CustomButton";
 import IngredientPicker from "../SideBar/IngredientPicker";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function IngredientsQuestion(props) {
     const  [ingredients, setIngredients] = useState([
@@ -10,13 +10,8 @@ function IngredientsQuestion(props) {
         {"name" : "rice", "isChecked" : false}
     ]);
 
-    useEffect(() => {
-        console.log(ingredients);
-    });
-
     function ingredientAdded(ingredient) {
         setIngredients((oldIngredients) => [...oldIngredients, ingredient]);
-        
     }
 
     // returns the names of ingredients that have isChecked === true.

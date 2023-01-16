@@ -1,14 +1,9 @@
 import styles from './RecipeListItem.module.css';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 function RecipeListItem(props) {
     const item = props.item;
     const navigate = useNavigate();
-
-    useEffect(() => {
-        console.log(item);
-    });
 
     return (
         <main className={styles.recipe} onClick={() => { navigate('/recipes/' + item.id) }}>

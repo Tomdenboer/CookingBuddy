@@ -26,7 +26,6 @@ function FilteringSideBar(props) {
     };
 
     function timeToPrepareChanged (e) {
-        console.log(timeToPrepare);
         if(isNaN(e.target.value)) {
             console.log("Input value is not a number");
         } else {

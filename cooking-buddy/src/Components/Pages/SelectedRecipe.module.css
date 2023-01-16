@@ -1,0 +1,79 @@
+.body {
+    background: #d8e1ea;
+}
+
+.page {
+    margin-top: 40px;
+    margin-right: 20%;
+    margin-left: 20%;
+    background: white;
+    padding: 30px;
+    color: #3D3D3D;
+    box-shadow: 2px 2px 20px rgb(190, 190, 190);
+    border-radius: 5px;
+}
+
+.header {
+    font-size: 2.6em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    /* border-bottom: 2px solid rgb(230, 230, 230); */
+    /* margin-bottom: 50px; */
+}
+
+.image {
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 20px rgb(190, 190, 190);
+    border: 2px solid rgb(190, 190, 190);
+}
+
+.ul {
+    /* background: rgb(230, 230, 230); */
+    /* border: 2px solid rgb(230, 230, 230); */
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+.ul > li {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: green;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+.h3 {
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.ingredients {
+    list-style-type: disc;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.2em;
+    padding-left: 10%;
+    padding-right: 10%;
+    column-gap: 40px;
+}
+
+.content {
+    /* width: 60%; */
+    /* margin: auto; */
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.2em;
+    text-align: left;
+}
